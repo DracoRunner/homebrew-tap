@@ -5,21 +5,21 @@
 class Avm < Formula
   desc "A lightweight local/global command alias manager"
   homepage "https://github.com/DracoRunner/avm"
-  version "0.3.0"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PrajaNova/avm/releases/download/v0.3.0/avm_darwin_amd64.tar.gz"
-      sha256 "bc0c0b2e3d387f0198dba7d36a6a0ec50b4442c70a656ec7f83eabe86bea7e5b"
+      url "https://github.com/PrajaNova/avm/releases/download/v0.2.6/avm_darwin_amd64.tar.gz"
+      sha256 "c6d9fd4863209dc014a9ea4f97fc18badb901bd7bcb7b2e497aa587988053ec8"
 
       define_method(:install) do
         bin.install "avm" => "avm-bin"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PrajaNova/avm/releases/download/v0.3.0/avm_darwin_arm64.tar.gz"
-      sha256 "d5be64e0b68a94144e22fe7e9af572835053ff10e9527dfcc8f0c45f81227c07"
+      url "https://github.com/PrajaNova/avm/releases/download/v0.2.6/avm_darwin_arm64.tar.gz"
+      sha256 "10565f75e54bd5e11328005c85e548d422c64c7ae16e0623200e8190afe4b7f0"
 
       define_method(:install) do
         bin.install "avm" => "avm-bin"
@@ -29,15 +29,15 @@ class Avm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PrajaNova/avm/releases/download/v0.3.0/avm_linux_amd64.tar.gz"
-      sha256 "44034e10b3e1a213128cb7744b4b45d407e19e1daa247149a1d61dc307cebee7"
+      url "https://github.com/PrajaNova/avm/releases/download/v0.2.6/avm_linux_amd64.tar.gz"
+      sha256 "65363db05bcfa4466e05090b795305a3be8b09835bf49146c0f1cdb9c1075608"
       define_method(:install) do
         bin.install "avm" => "avm-bin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PrajaNova/avm/releases/download/v0.3.0/avm_linux_arm64.tar.gz"
-      sha256 "e0e5583e5a2b4cff9562ece015fb8469f40fc3f2aeb063983d438af9b3b82c17"
+      url "https://github.com/PrajaNova/avm/releases/download/v0.2.6/avm_linux_arm64.tar.gz"
+      sha256 "883a24839211b422a5a64e275daada9e6beafac3313faf3b61ac06c722ae21a3"
       define_method(:install) do
         bin.install "avm" => "avm-bin"
       end
